@@ -1,4 +1,4 @@
-import 'dart:ffi';
+
 
 import 'package:flutter/material.dart';
 
@@ -21,10 +21,16 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green.shade600,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('../image/background.jpg'),
+          fit: BoxFit.cover,
+        ),
+      ),
+      color: Color(0xFF033E8C),
       child: Center(
         child: CircularProgressIndicator(
-          color: const Color.fromARGB(255, 255, 253, 253),
+          color: Color(0xFF2CBF6C),
         ),
       ),
     );
