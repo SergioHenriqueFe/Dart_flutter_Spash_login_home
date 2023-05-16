@@ -14,10 +14,7 @@ class LoginPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.people,
-              size: 40,
-            ),
+            
             TextField(
               decoration: InputDecoration(
                 label: Text('Login'),

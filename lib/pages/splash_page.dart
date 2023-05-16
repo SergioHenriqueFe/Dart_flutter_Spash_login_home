@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -13,7 +11,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3)).then(
+    Future.delayed(Duration(seconds: 5)).then(
       (_) => Navigator.of(context).pushReplacementNamed('/login'),
     );
   }
@@ -21,16 +19,18 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      constraints: BoxConstraints.expand(),
+      decoration:const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('../image/background.jpg'),
-          fit: BoxFit.cover,
+          image: NetworkImage(
+              "https://wallpapercave.com/wp/wp4963221.jpg"),
+              fit: BoxFit.cover
         ),
       ),
-      color: Color(0xFF033E8C),
+      // color: Color(0xFF033E8C),
       child: Center(
         child: CircularProgressIndicator(
-          color: Color(0xFF2CBF6C),
+          color: Color.fromRGBO(249, 251, 250, 1),
         ),
       ),
     );
