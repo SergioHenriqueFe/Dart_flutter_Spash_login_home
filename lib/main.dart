@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Início',
       theme: ThemeData(primarySwatch: Colors.green),
       initialRoute: '/splash',
